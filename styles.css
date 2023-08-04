@@ -1,0 +1,165 @@
+:root {
+    /* Primary */
+    --Orange: hsl(25, 97%, 53%);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsla(217, 12%, 63%, 0.111);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-Dark-Blue);
+}
+main {
+    border-radius: 1rem;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    text-align: start;
+}
+
+/* first component */
+.component {
+    background-color:var(--Dark-Blue);
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+.component img {
+    width: 15px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--Light-Grey);
+}
+.component h1{
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.component p{
+    color: var(--Medium-Grey);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.component ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    list-style: none;
+}
+.component li .ratingBtn {
+    padding: 15px 20px;
+    border-radius: 50%;
+    color: var(--Medium-Grey);
+    background-color: var(--Light-Grey);
+    cursor: pointer;
+}
+.component li .ratingBtn:hover {
+    color: var(--White);
+    background-color: var(--Orange);
+    transition: all 0.5s ease;
+}
+.component li .ratingBtn:focus {
+    color: var(--White);
+    background-color: var(--Medium-Grey);
+    transition: all 0.5s ease;
+}
+.component button {
+    padding: 15px 20px;
+    border: none;
+    background-color: var(--Orange);
+    color: var(--White);
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+.component button:hover {
+    color: var(--Orange);
+    background-color: var(--White);
+    transition: all 0.5s ease;
+}
+
+/* hidden */
+.hidden {
+    display: none !important;
+}
+
+/* Thank you component */
+
+.component2 {
+    background-color: var(--Dark-Blue);
+    width: 24rem;
+    padding: 2rem;
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+}
+.component2 .img2 {
+    width: 175px;
+}
+.component2 h2 {
+    color: var(--Orange);
+    font-weight: 400;
+    padding: 10px;
+    background-color: var(--Light-Grey);
+    border-radius: 50px;
+}
+.component2 h1 {
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.component2 p {
+    font-weight: 400;
+    color: var(--Medium-Grey);
+    font-size: 1.2rem;
+}
+
+/* footer */
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+    padding-block: 2rem;
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--Medium-Grey);
+}
+
+@media (max-width: 425px) {
+    .component ,.component2 {
+        width: 20rem;
+    }
+    .component2 p ,.component p {
+        font-size: 1rem;
+    }
+    .component ul {
+        gap: 10px;
+        justify-content: space-between;
+    }
+}
